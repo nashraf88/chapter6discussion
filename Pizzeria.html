@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="caastylesheet.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+    
+        <header><h1><a href="contact.html">Pizzeria</a></h1><h6>Created by Nazia Ashraf</h6></header>
+    <main>
+        
+       <form method="post" action="https://webdevbasics.net/scripts/adoptionsite.php"></form>
+
+        <form>
+            
+            <h3>Customize your order</h3><br>
+            <h5>Size</h5><br>
+            <input type="checkbox" name="small" id="small" value="yes">Small<br>
+            <input type="checkbox" name="medium" id="medium" value="yes">Medium<br>
+            <input type="checkbox" name="large" id="large" value="yes">Large<br>
+            <h5>Crust</h5><br>
+            <input type="checkbox" name="handtossed" id="handtossed" value="yes">Hand-tossed<br>
+            <input type="checkbox" name="pan" id="pan" value="yes">Pan<br>
+            <input type="checkbox" name="thin" id="thin" value="yes">Thin<br>
+            <h5>Toppings</h5><br>
+            <input type="checkbox" name="pepperoni" id="pepperoni" value="yes">Pepperoni<br>
+            <input type="checkbox" name="chicken" id="chicken" value="yes">Chicken<br>
+            <input type="checkbox" name="beef" id="beef" value="yes">Beef<br>
+            <input type="checkbox" name="ham" id="ham" value="yes">Ham<br>
+            <input type="checkbox" name="onions" id="onions" value="yes">Onions<br>
+            <input type="checkbox" name="spinach" id="spinach" value="yes">Spinach<br>
+            <input type="checkbox" name="artichoke" id="artichoke" value="yes">Artichoke<br>
+            <input type="checkbox" name="pineapple" id="pineapple" value="yes">Pineapple<br>
+            <input type="checkbox" name="blackolives" id="blackolives" value="yes">Black Olives<br>
+            <input type="checkbox" name="greenolives" id="greenolives" value="yes">Green Olives<br>
+            <input type="checkbox" name="mushrooms" id="mushrooms" value="yes">Mushrooms<br>
+            <input type="checkbox" name="greenpeppers" id="greenpeppers" value="yes">Green Peppers<br>
+            <input type="checkbox" name="bananapeppers" id="bananapeppers" value="yes">Banana Peppers<br>
+            <input type="checkbox" name="jalapenopeppers" id="jalapenopeppers" value="yes">Jalapeno Peppers<br>
+            <input type="checkbox" name="roastedredpeppers" id="roastedredpeppers" value="yes">Roasted Red Peppers<br>
+
+            <h3>Payment</h3><br>
+
+            <select> 
+                <option value="">——— Choose a Payment Method ———</option>
+                <option>Credit Card</option> 
+                <option>Paypal</option>
+                <option>Cash</option>
+            </select>
+
+            <br>
+            <br>
+
+            
+            <h5>Delivery Address</h5><br>
+
+            <label for="myName">Name*:</label>
+            <input type="text" name="myName" id="myName">
+
+            <label for="myPhone">Primary Phone*:</label>
+            <input type="number" name="myPhone" id="myPhone" maxlength="15">
+
+            <label for="myEmail">Email*:</label>
+            <input type="email" name="myEmail" id="myEmail">
+
+            <label for="myAddress">Street Address*:</label>
+            <input type="text" name="myAddress" id="myAddress">
+
+            <label for="myCity">City*:</label>
+            <input type="text" name="myCity" id="myCity">
+
+            <label for="myZip">Zip Code*:</label>
+            <input type="number" name="myZip" id="myZip" maxlength="5">
+
+            <input type="submit" onclick="testformcompleteness()" value="Submit Order" id="mySubmit">
+            
+        </form>
+    </main>
+    <br>
+    <footer><a href>Privacy Policy</a><br><a href>Terms of Use</a><br>
+    
+    </footer>
+    <script>
+        function validateName() { 
+            try {
+                var Name = document.getElementById("myName").value; 
+                if (Name === "") {
+                    throw "Please enter your name.";
+                }
+            }
+                    catch(NameError) { 
+                        window.alert(NameError) 
+                        return false;
+                    } 
+                    finally {
+                        NameValid = true;
+                    }
+                    return true;
+                }
+
+        function validatePhone() { 
+            try {
+                var Phone = document.getElementById("myPhone"); 
+                if (Phone.value === "") {
+                    throw "Please enter your contact number.";
+                }
+            }
+                    catch(PhoneError) { 
+                        window.alert(PhoneError) 
+                        return false;
+                    } 
+                    finally {
+                        PhoneValid = true;
+                    }
+                    return true;
+                }       
+
+        function validateEmail() { 
+            try {
+                var Email = document.getElementById("myEmail").value; 
+                if (Email === "") {
+                    throw "Please enter your email.";
+                }
+            }
+                    catch(EmailError) { 
+                        window.alert(EmailError) 
+                        return false;
+                    } 
+                    finally {
+                        NameEmail = true;
+                    }
+                    return true;
+                }
+            
+        function validateAddress() { 
+            try {
+                var Address = document.getElementById("myAddress").value; 
+                if (Address === "") {
+                    throw "Please enter your address.";
+                }
+            }
+                    catch(AddressError) { 
+                        window.alert(AddressError) 
+                        return false;
+                    } 
+                    finally {
+                        AddressValid = true;
+                    }
+                    return true;
+                }
+
+        function validateCity() { 
+            try {
+                var City = document.getElementById("myCity").value; 
+                if (City === "") {
+                    throw "Please enter your city.";
+                }
+            }
+            catch(CityError) { 
+                window.alert(CityError) 
+                return false;
+            } 
+            finally {
+                CityValid = true;
+                }
+                return true;
+            }
+
+        function validateZip() { 
+            try {
+                var Zip = document.getElementById("myZip"); 
+                if (Zip.value === "") {
+                    throw "Please enter your Zip Code.";
+                }
+            }
+                    catch(ZipError) { 
+                        window.alert(ZipError) 
+                        return false;
+                    } 
+                    finally {
+                        ZipValid = true;
+                    }
+                    return true;
+                }       
+
+        function testformcompleteness(){
+            validateName()
+            validatePhone()
+            validateEmail()
+            validateAddress()
+            validateCity()
+            validateZip()
+        }
+
+
+    </script>
+    </body></html>
